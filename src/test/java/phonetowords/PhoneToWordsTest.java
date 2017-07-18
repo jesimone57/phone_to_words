@@ -49,6 +49,11 @@ public class PhoneToWordsTest {
 		assertEquals(new TreeSet<String>(Arrays.asList("AA", "AB", "AC", "BA", "BB", "BC", "CA", "CB", "CC")), PhoneToWords.phoneNumberToWords("22"));
 	}
 
+	@Test(expected=IllegalArgumentException.class)
+	public void phoneToWordsInvalidCharacters() {
+		PhoneToWords.phoneNumberToWords("2-.abcd$");
+	}
+
 	@Test
 	public void phoneToWordsNumberTwo() {
 		assertEquals(new TreeSet<String>(Arrays.asList("A", "B", "C")), PhoneToWords.phoneNumberToWords("2"));

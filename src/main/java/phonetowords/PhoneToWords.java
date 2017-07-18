@@ -53,13 +53,17 @@ public class PhoneToWords {
 
 			StringBuilder sb = new StringBuilder();
 			for (int j = 0; j < phoneNumber.length(); j++) {
-				int keyIndex = Integer.valueOf(String.valueOf(phoneNumber.charAt(j)));
-				//System.out.println("-->"+keyIndex);
-				int place = Integer.valueOf(String.valueOf(base4StringPadded.charAt(j)));
-				//System.out.println("-->"+place);
-				String letter = getKeyCharacter(keyIndex, place);
-				if (letter != null) {
-					sb.append(letter);
+				try {
+					int keyIndex = Integer.valueOf(String.valueOf(phoneNumber.charAt(j)));
+					//System.out.println("-->"+keyIndex);
+					int place = Integer.valueOf(String.valueOf(base4StringPadded.charAt(j)));
+					//System.out.println("-->"+place);
+					String letter = getKeyCharacter(keyIndex, place);
+					if (letter != null) {
+						sb.append(letter);
+					}
+				} catch (NumberFormatException nfex) {
+					throw new IllegalArgumentException("Phone number contains non digit 0-9 characters.  Only digits 0-9 allowed.");
 				}
 			}
 

@@ -1,11 +1,14 @@
 # Phone Number to a List of Words
 
 Example Java code of how to convert any N digit phone number to a list of
-corresponding words formed from the phone key pad digits 0 through 9.  Note:  
-key pad number 0 and 1 do not map to any letters.
+corresponding words formed from the phone key pad digits 0 through 9.  
+Note:  key pad number 0 and 1 do not map to any letters.
 <p/>
 This solution is a completely original solution and does not use recursion or a 
 stack to create the result set.
+<p/>
+This example code comes with a set of unit tests to validate and verify the 
+correct operation of the code.  Note, edge cases are also considered.
 
 ### Prerequisites
 * Java 1.7+
@@ -47,17 +50,17 @@ stack to create the result set.
  T E S T S
 -------------------------------------------------------
 Running phonetowords.PhoneToWordsTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec - in phonetowords.PhoneToWordsTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 sec - in phonetowords.PhoneToWordsTest
 
 Results :
 
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 0.881 s
-[INFO] Finished at: 2017-07-18T10:23:16-04:00
+[INFO] Total time: 0.893 s
+[INFO] Finished at: 2017-07-18T10:34:46-04:00
 [INFO] Final Memory: 11M/309M
 [INFO] ------------------------------------------------------------------------
 </pre>
