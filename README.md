@@ -23,6 +23,8 @@ correct operation of the code.  Note, edge cases are also considered.
 * mvn clean compile
 * mvn test
 * mvn exec:java -Dexec.mainClass="phonetowords.PhoneToWords"
+* mvn exec:java -Dexec.mainClass="phonetowords.PhoneToWords" -Dexec.args="4261408"
+
 
 ### Unit test results
 <pre>
@@ -69,38 +71,313 @@ Tests run: 14, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 </pre>
 
-### Sample Ouput
+### Sample Output 1
 <pre>
-Phone Number: 9677549
-WMPPJGW
-WMPPJGX
-WMPPJGY
-WMPPJGZ
-WMPPJHW
-WMPPJHX
-WMPPJHY
-WMPPJHZ
-WMPPJIW
-WMPPJIX
-WMPPJIY
-WMPPJIZ
-WMPPKGW
-WMPPKGX
-WMPPKGY
-WMPPKGZ
-...
-ZOSSLHY
-ZOSSLHZ
-ZOSSLIW
-ZOSSLIX
-ZOSSLIY
-ZOSSLIZ
-Total Number of words: 6912
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building phone_to_words 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:1.6.0:java (default-cli) @ phone_to_words ---
+Phone Number: 228
+AAT
+AAU
+AAV
+ABT
+ABU
+ABV
+ACT
+ACU
+ACV
+BAT
+BAU
+BAV
+BBT
+BBU
+BBV
+BCT
+BCU
+BCV
+CAT
+CAU
+CAV
+CBT
+CBU
+CBV
+CCT
+CCU
+CCV
+Total Number of words: 27
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 0.600 s
-[INFO] Finished at: 2017-07-18T10:15:41-04:00
+[INFO] Total time: 0.459 s
+[INFO] Finished at: 2017-07-18T18:05:25-04:00
+[INFO] Final Memory: 12M/245M
+[INFO] ------------------------------------------------------------------------
+</pre>
+
+
+### Sample Output 2
+<pre>
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building phone_to_words 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:1.6.0:java (default-cli) @ phone_to_words ---
+Phone Number: 4261408
+GAMGT
+GAMGU
+GAMGV
+GAMHT
+GAMHU
+GAMHV
+GAMIT
+GAMIU
+GAMIV
+GANGT
+GANGU
+GANGV
+GANHT
+GANHU
+GANHV
+GANIT
+GANIU
+GANIV
+GAOGT
+GAOGU
+GAOGV
+GAOHT
+GAOHU
+GAOHV
+GAOIT
+GAOIU
+GAOIV
+GBMGT
+GBMGU
+GBMGV
+GBMHT
+GBMHU
+GBMHV
+GBMIT
+GBMIU
+GBMIV
+GBNGT
+GBNGU
+GBNGV
+GBNHT
+GBNHU
+GBNHV
+GBNIT
+GBNIU
+GBNIV
+GBOGT
+GBOGU
+GBOGV
+GBOHT
+GBOHU
+GBOHV
+GBOIT
+GBOIU
+GBOIV
+GCMGT
+GCMGU
+GCMGV
+GCMHT
+GCMHU
+GCMHV
+GCMIT
+GCMIU
+GCMIV
+GCNGT
+GCNGU
+GCNGV
+GCNHT
+GCNHU
+GCNHV
+GCNIT
+GCNIU
+GCNIV
+GCOGT
+GCOGU
+GCOGV
+GCOHT
+GCOHU
+GCOHV
+GCOIT
+GCOIU
+GCOIV
+HAMGT
+HAMGU
+HAMGV
+HAMHT
+HAMHU
+HAMHV
+HAMIT
+HAMIU
+HAMIV
+HANGT
+HANGU
+HANGV
+HANHT
+HANHU
+HANHV
+HANIT
+HANIU
+HANIV
+HAOGT
+HAOGU
+HAOGV
+HAOHT
+HAOHU
+HAOHV
+HAOIT
+HAOIU
+HAOIV
+HBMGT
+HBMGU
+HBMGV
+HBMHT
+HBMHU
+HBMHV
+HBMIT
+HBMIU
+HBMIV
+HBNGT
+HBNGU
+HBNGV
+HBNHT
+HBNHU
+HBNHV
+HBNIT
+HBNIU
+HBNIV
+HBOGT
+HBOGU
+HBOGV
+HBOHT
+HBOHU
+HBOHV
+HBOIT
+HBOIU
+HBOIV
+HCMGT
+HCMGU
+HCMGV
+HCMHT
+HCMHU
+HCMHV
+HCMIT
+HCMIU
+HCMIV
+HCNGT
+HCNGU
+HCNGV
+HCNHT
+HCNHU
+HCNHV
+HCNIT
+HCNIU
+HCNIV
+HCOGT
+HCOGU
+HCOGV
+HCOHT
+HCOHU
+HCOHV
+HCOIT
+HCOIU
+HCOIV
+IAMGT
+IAMGU
+IAMGV
+IAMHT
+IAMHU
+IAMHV
+IAMIT
+IAMIU
+IAMIV
+IANGT
+IANGU
+IANGV
+IANHT
+IANHU
+IANHV
+IANIT
+IANIU
+IANIV
+IAOGT
+IAOGU
+IAOGV
+IAOHT
+IAOHU
+IAOHV
+IAOIT
+IAOIU
+IAOIV
+IBMGT
+IBMGU
+IBMGV
+IBMHT
+IBMHU
+IBMHV
+IBMIT
+IBMIU
+IBMIV
+IBNGT
+IBNGU
+IBNGV
+IBNHT
+IBNHU
+IBNHV
+IBNIT
+IBNIU
+IBNIV
+IBOGT
+IBOGU
+IBOGV
+IBOHT
+IBOHU
+IBOHV
+IBOIT
+IBOIU
+IBOIV
+ICMGT
+ICMGU
+ICMGV
+ICMHT
+ICMHU
+ICMHV
+ICMIT
+ICMIU
+ICMIV
+ICNGT
+ICNGU
+ICNGV
+ICNHT
+ICNHU
+ICNHV
+ICNIT
+ICNIU
+ICNIV
+ICOGT
+ICOGU
+ICOGV
+ICOHT
+ICOHU
+ICOHV
+ICOIT
+ICOIU
+ICOIV
+Total Number of words: 243
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.519 s
+[INFO] Finished at: 2017-07-18T18:12:05-04:00
 [INFO] Final Memory: 12M/309M
 [INFO] ------------------------------------------------------------------------
 </pre>

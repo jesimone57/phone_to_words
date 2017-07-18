@@ -76,7 +76,10 @@ public class PhoneToWords {
 	}
 
 	public static void main(String[] args) {
-		String phoneNumber = "9677549";
+		String phoneNumber = "228";
+		if (args.length != 0) {
+			phoneNumber = args[0];
+		}
 		System.out.println("Phone Number: " + phoneNumber);
 		Set<String> words = phoneNumberToWords(phoneNumber);
 		for (String word : words) {
