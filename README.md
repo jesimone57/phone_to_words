@@ -3,6 +3,7 @@
 Example Java code of how to convert any N digit phone number to a list of
 corresponding words formed from the phone key pad digits 0 through 9.  
 Note:  key pad number 0 and 1 do not map to any letters.
+![Telephone Keypad](../master/Telephone-keypad.png)
 <p/>
 This solution is a completely original solution and does not use recursion or a 
 stack to create the result set.
