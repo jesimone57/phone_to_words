@@ -3,9 +3,11 @@ package phonetowords;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.Set;
 import java.util.TreeSet;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 /**
@@ -46,10 +48,11 @@ public class PhoneToWordsTest {
 
 	@Test
 	public void phoneToWords() {
-		assertEquals(new TreeSet<String>(Arrays.asList("AA", "AB", "AC", "BA", "BB", "BC", "CA", "CB", "CC")), PhoneToWords.phoneNumberToWords("22"));
+		assertEquals(new TreeSet<String>(Arrays.asList("AA", "AB", "AC", "BA", "BB", "BC", "CA", "CB", "CC")),
+				PhoneToWords.phoneNumberToWords("22"));
 	}
 
-	@Test(expected=IllegalArgumentException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void phoneToWordsInvalidCharacters() {
 		PhoneToWords.phoneNumberToWords("2-.abcd$");
 	}
@@ -94,6 +97,43 @@ public class PhoneToWordsTest {
 				"BW", "BX", "BY", "BZ",
 				"CW", "CX", "CY", "CZ"
 		)), PhoneToWords.phoneNumberToWords("29"));
+	}
+
+	@Test
+	public void phoneToWordsPhoneNumberHasAll3LetterMappings() {
+		Set<String> words = PhoneToWords.phoneNumberToWords("2345568");
+		assertEquals(Math.pow(3, 7), words.size(), 0.01);
+	}
+
+	@Test
+	public void phoneToWordsPhoneNumberHasAll4LetterMappings() {
+		Set<String> words = PhoneToWords.phoneNumberToWords("797");
+		assertEquals(Math.pow(4, 3), words.size(), 0.01);
+	}
+
+	@Test
+	public void phoneToWordsPhoneNumberHas3And4LetterMappings() {
+		Set<String> words = PhoneToWords.phoneNumberToWords("2345769");
+		assertEquals(Math.pow(4, 2) * Math.pow(3, 5), words.size(), 0.01);
+	}
+
+	@Test
+	public void phoneToWordsContainsWords() {
+		Set<String> words = PhoneToWords.phoneNumberToWords("2222222");
+		assertTrue(words.contains("CABABAB"));
+		assertTrue(words.contains("BABACAB"));
+		assertTrue(words.contains("BACACAC"));
+
+		assertTrue(words.contains("AAAAAAA"));
+		assertTrue(words.contains("BBBBBBB"));
+		assertTrue(words.contains("CCCCCCC"));
+	}
+
+	@Test
+	public void phoneToWordsContainsWords2() {
+		Set<String> words = PhoneToWords.phoneNumberToWords("228728");
+		assertTrue(words.contains("CATRAT"));
+		assertTrue(words.contains("BATRAT"));
 	}
 
 }

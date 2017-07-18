@@ -5,7 +5,7 @@ corresponding words formed from the phone key pad digits 0 through 9.
 <br/>
 ![Telephone Keypad](../master/Telephone-keypad.png)
 <br/>
-Note:  key pad number 0 and 1 do not map to any letters.
+**Note:  key pad number 0 and 1 do not map to any letters.**
 <p/>
 This solution is a completely original solution and does not use recursion or a 
 stack to create the result set.
@@ -44,7 +44,8 @@ correct operation of the code.  Note, edge cases are also considered.
 [INFO] skip non existing resourceDirectory /Users/jsimone/projects/phone_to_words/src/test/resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ phone_to_words ---
-[INFO] Nothing to compile - all classes are up to date
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/jsimone/projects/phone_to_words/target/test-classes
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ phone_to_words ---
 [INFO] Surefire report directory: /Users/jsimone/projects/phone_to_words/target/surefire-reports
@@ -53,18 +54,18 @@ correct operation of the code.  Note, edge cases are also considered.
  T E S T S
 -------------------------------------------------------
 Running phonetowords.PhoneToWordsTest
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 sec - in phonetowords.PhoneToWordsTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.2 sec - in phonetowords.PhoneToWordsTest
 
 Results :
 
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 0.893 s
-[INFO] Finished at: 2017-07-18T10:34:46-04:00
-[INFO] Final Memory: 11M/309M
+[INFO] Total time: 1.514 s
+[INFO] Finished at: 2017-07-18T18:00:03-04:00
+[INFO] Final Memory: 17M/304M
 [INFO] ------------------------------------------------------------------------
 </pre>
 
