@@ -28,46 +28,22 @@ correct operation of the code.  Note, edge cases are also considered.
 
 ### Unit test results
 <pre>
-[INFO] Scanning for projects...
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] Building phone_to_words 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ phone_to_words ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 0 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ phone_to_words ---
-[INFO] Nothing to compile - all classes are up to date
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ phone_to_words ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/jsimone/projects/phone_to_words/src/test/resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ phone_to_words ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /Users/jsimone/projects/phone_to_words/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ phone_to_words ---
-[INFO] Surefire report directory: /Users/jsimone/projects/phone_to_words/target/surefire-reports
-
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
 Running phonetowords.PhoneToWordsTest
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.2 sec - in phonetowords.PhoneToWordsTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.194 sec - in phonetowords.PhoneToWordsTest
 
 Results :
 
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1.514 s
-[INFO] Finished at: 2017-07-18T18:00:03-04:00
-[INFO] Final Memory: 17M/304M
+[INFO] Total time: 1.002 s
+[INFO] Finished at: 2017-07-19T10:23:53-04:00
+[INFO] Final Memory: 11M/309M
 [INFO] ------------------------------------------------------------------------
 </pre>
 

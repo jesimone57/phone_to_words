@@ -7,9 +7,9 @@ import java.util.TreeSet;
 
 /**
  * Created by jsimone on 7/18/17.
- *
+ * <p>
  * List all the words than can be generated from a N-digit phone number.
- *
+ * <p>
  * A completely original solution.  Please run the unit tests to validate.
  */
 public class PhoneToWords {
@@ -41,22 +41,25 @@ public class PhoneToWords {
 	public static Set<String> phoneNumberToWords(String phoneNumber) {
 		Set<String> words = new TreeSet<>();
 
-		String base4Format = "%0" + String.valueOf(phoneNumber.length()) + "d";
+		String zeroPadFormat = "%0" + String.valueOf(phoneNumber.length()) + "d";
 		String phoneNormalized = phoneNumber.toString().replaceAll("[01]", "");
 		//System.out.println("normalize-> "+phoneNormalized);
 
-		for (int i = 0; i < Math.pow(4, phoneNumber.length()); i++) {
-			String base4String = Long.toString(i, 4);
+		// Note; keypad 7 and 9 need 4 character mapping while all other keys only need 3 character mapping.
+		int radix = phoneNormalized.contains("7") || phoneNormalized.contains("9") ? 4 : 3;
 
-			String base4StringPadded = String.format(base4Format, Long.valueOf(base4String));
-			//System.out.println(i+"   "+ base4StringPadded);
+		for (int i = 0; i < Math.pow(radix, phoneNumber.length()); i++) {
+			String radixString = Long.toString(i, radix);
+
+			String radixStringPadded = String.format(zeroPadFormat, Long.valueOf(radixString));
+			//System.out.println(i+"   "+ radixStringPadded);
 
 			StringBuilder sb = new StringBuilder();
 			for (int j = 0; j < phoneNumber.length(); j++) {
 				try {
 					int keyIndex = Integer.valueOf(String.valueOf(phoneNumber.charAt(j)));
 					//System.out.println("-->"+keyIndex);
-					int place = Integer.valueOf(String.valueOf(base4StringPadded.charAt(j)));
+					int place = Integer.valueOf(String.valueOf(radixStringPadded.charAt(j)));
 					//System.out.println("-->"+place);
 					String letter = getKeyCharacter(keyIndex, place);
 					if (letter != null) {

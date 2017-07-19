@@ -22,18 +22,20 @@ public class PhoneToWordsTest {
 		assertEquals(null, PhoneToWords.getKeyCharacter(0, 2));
 		assertEquals(null, PhoneToWords.getKeyCharacter(0, 3));
 		assertEquals(null, PhoneToWords.getKeyCharacter(0, 4));
+		assertEquals(null, PhoneToWords.getKeyCharacter(0, 5));
 
 		assertEquals(null, PhoneToWords.getKeyCharacter(1, 0));
 		assertEquals(null, PhoneToWords.getKeyCharacter(1, 1));
 		assertEquals(null, PhoneToWords.getKeyCharacter(1, 2));
 		assertEquals(null, PhoneToWords.getKeyCharacter(1, 3));
-		assertEquals(null, PhoneToWords.getKeyCharacter(1, 4));
+		assertEquals(null, PhoneToWords.getKeyCharacter(1, 5));
 
 		assertEquals(null, PhoneToWords.getKeyCharacter(26, 0));
 		assertEquals(null, PhoneToWords.getKeyCharacter(-1, 1));
 		assertEquals(null, PhoneToWords.getKeyCharacter(15, 2));
 		assertEquals(null, PhoneToWords.getKeyCharacter(105, 3));
 		assertEquals(null, PhoneToWords.getKeyCharacter(6000, 4));
+		assertEquals(null, PhoneToWords.getKeyCharacter(244, 5));
 	}
 
 	@Test
@@ -44,6 +46,7 @@ public class PhoneToWordsTest {
 		assertEquals("C", PhoneToWords.getKeyCharacter(2, 2));
 		assertEquals(null, PhoneToWords.getKeyCharacter(2, 3));
 		assertEquals(null, PhoneToWords.getKeyCharacter(2, 4));
+		assertEquals(null, PhoneToWords.getKeyCharacter(2, 5));
 	}
 
 	@Test
@@ -115,6 +118,18 @@ public class PhoneToWordsTest {
 	public void phoneToWordsPhoneNumberHas3And4LetterMappings() {
 		Set<String> words = PhoneToWords.phoneNumberToWords("2345769");
 		assertEquals(Math.pow(4, 2) * Math.pow(3, 5), words.size(), 0.01);
+	}
+
+	@Test
+	public void phoneToWordsPhoneNumberHas4LetterMappingsAnd0And1() {
+		Set<String> words = PhoneToWords.phoneNumberToWords("197907");
+		assertEquals(Math.pow(4, 4), words.size(), 0.01);
+	}
+
+	@Test
+	public void phoneToWordsPhoneNumberHas3LetterMappingsAnd0And1() {
+		Set<String> words = PhoneToWords.phoneNumberToWords("125603");
+		assertEquals(Math.pow(3, 4), words.size(), 0.01);
 	}
 
 	@Test
